@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div style="font-family: 'Arial Narrow'">
+
+    <table style="display: flex; flex-direction: column; align-items: center; justify-content: center">
+        <thread>
+            <tr style="display: flex; justify-content: space-around">
+                <th scope="col" style="width:150px; padding: 12px">Brand</th>
+                <th scope="col" style="width:150px; padding: 12px">Model</th>
+                <th scope="col" style="width:150px; padding: 12px">Horse Power</th>
+            </tr>
+        </thread>
+        <tbody >
+        <tr th:each="car: ${carsList}">
+            <td th:text="${car.brand}" style="border-top: 1px solid lightgray; margin: 0; width:150px; padding: 12px; text-align: center; align-items: center"/>
+            <td th:text="${car.model}" style="border-top: 1px solid lightgray; margin: 0; width:150px; padding: 12px; text-align: center; align-items: center"/>
+            <td th:text="${car.horsePowers}" style="border-top: 1px solid lightgray; margin: 0; width:150px; padding: 12px; text-align: center; align-items: center"/>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
